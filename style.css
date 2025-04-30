@@ -1,0 +1,70 @@
+.container {
+	max-width: 700px;
+	margin: 40px auto;
+	background: #ffffff0d;
+	padding: 20px;
+	border-radius: 12px;
+	color: #fff;
+	font-family: 'Segoe UI', sans-serif;
+  }
+  
+  h1 {
+	text-align: center;
+	color: #000000;
+	margin-bottom: 20px;
+  }
+  
+  .input-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+  }
+  
+  .input-container input {
+	padding: 10px;
+	width: 60%;
+	font-size: 16px;
+	border-radius: 8px 0 0 8px;
+	border: none;
+	outline: none;
+  }
+  
+  .input-container button {
+	padding: 10px 16px;
+	font-size: 16px;
+	border-radius: 0 8px 8px 0;
+	border: none;
+	background-color: #2c86c5;
+	color: white;
+	cursor: pointer;
+  }
+  
+  .chat-box {
+	padding: 10px;
+	border-radius: 8px;
+	background-color: #1d1e26;
+  }
+  
+  .pages-info ul {
+	padding-left: 20px;
+	margin: 0;
+  }
+  
+  .images-container {
+	margin-top: 15px;
+  }
+  
+  .image-grid {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin-top: 10px;
+  }
+  
+  .image-grid img {
+	max-width: 250px;
+	border-radius: 10px;
+	border: 1px solid #444;
+	box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  }
+  

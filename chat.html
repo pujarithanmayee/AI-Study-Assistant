@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PDF Chatbot</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Ask something from the PDF 📄</h1>
+    <div class="chat-box" id="responseBox">
+      {% if user_msg %}
+        <p><strong>You:</strong> {{ user_msg }}</p>
+        <p><strong>Bot:</strong> {{ answer }}</p>
+
+        {% if pages %}
+          <div class="pages-info">
+            <strong>📄 Pages for reference:</strong>
+            <ul>
+              {% for page in pages %}
+                <li>{{ page }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if image_paths %}
+          <div class="images-container">
+            <strong>🖼️ Related Image{{ image_paths|length > 1 and 's' or '' }}:</strong>
+            <div class="image-grid">
+              {% for img in image_paths %}
+                <img src="{{ url_for('static', filename=img) }}" alt="Page image">
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="input-container">
+      <form method="POST" action="/get">
+        <input type="text" name="msg" id="msgInput" placeholder="Type your question..." required />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

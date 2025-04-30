@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+langchain
+langchain-community
+sentence-transformers
+pymupdf  # for PDF processing
+pypdf  # optional but used by PyPDFLoader internally
+faiss-cpu
+ollama
+sqlalchemy
+mysqlclient  # OR use 'pymysql' if you face issues
+aiofiles
